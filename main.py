@@ -27,10 +27,6 @@ class MyClient(discord.Client):
             data = requests.get('https://yesno.wtf/api').json()
             await message.channel.send(data['image'])
 
-        if message.content.startswith('p!noyes'):
-            data = requests.get('https://yesno.wtf/api').json()
-            await message.channel.send(data['image'])
-
         if message.content.startswith('p!xkcd'):
             data = requests.get('https://c.xkcd.com/random/comic/')
             data = requests.get("https://xkcd.com/" + data.url[17:-1] +
